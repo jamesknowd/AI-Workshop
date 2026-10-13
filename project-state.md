@@ -12,7 +12,6 @@ Last updated: 2026-10-13
 
 ## Broken or flaky
 - `npm run lint` is listed in CLAUDE.md but there is no lint script in package.json, so it does not run. Adding ESLint was declined for now; `npm run build` is the check before pull requests.
-- Slice 1 has not yet been checked against its done-criteria on a preview or the live site.
 
 ## Environment notes
 - Hosting: Vercel. Database and auth: Supabase.
@@ -22,5 +21,4 @@ Last updated: 2026-10-13
 - If login fails on a Vercel preview link but not on the live site, check that NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY are enabled for the Preview environment in Vercel.
 
 ## Next session
-- Check each Slice 1 done-criterion on the preview link, then merge and re-check on the live site.
-- Once Slice 1 passes on the live site, mark it done in roadmap.md and start Slice 2.
+- Start Slice 2 (tagged tasks that persist) from roadmap.md.
