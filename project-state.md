@@ -15,11 +15,6 @@ Last updated: 2026-10-13
 - A person can tick a task's checkbox to mark it done, and it still shows as done after they reload the page.
 - A person who signs up for a second account sees none of the first account's tasks.
 
-## In progress
-- Slice 2 (tagged tasks that persist) is built in the "Slice 2" pull request, not yet merged or checked on the live site.
-- Signed-in users see a task form (text plus one of the six skills) and a list of their tasks with checkboxes. Tasks are saved in a Supabase table called `tasks`.
-- The `tasks` table is created by pasting SQL into the Supabase SQL Editor (it is in the pull request description). Row level security is on, so each user can read, add and update only their own rows. There is no delete policy because deleting tasks is in the Backlog.
-
 ## Broken or flaky
 - `npm run lint` is listed in CLAUDE.md but there is no lint script in package.json, so it does not run. Adding ESLint was declined for now; `npm run build` is the check before pull requests.
 
@@ -28,8 +23,9 @@ Last updated: 2026-10-13
 - Supabase keys live in Vercel project settings (Environment Variables) and in a local .env.local file. They are never committed or pasted into chat.
 - Email confirmation is turned off in Supabase, so a new account is signed in straight away with no confirmation email.
 - The site uses @supabase/supabase-js (added 2026-10-13 with approval). The login session is kept in the browser's local storage.
+- Tasks are stored in a Supabase table called `tasks`, created by pasting SQL into the Supabase SQL Editor (the SQL is in the "Slice 2" pull request description). Row level security is on, so each user can read, add and update only their own rows. There is no delete policy because deleting tasks is in the Backlog.
 - If login fails on a Vercel preview link but not on the live site, check that NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY are enabled for the Preview environment in Vercel.
 
 ## Next session
-- Confirm the `tasks` table exists in Supabase, then check every Slice 2 done-criterion on the preview link and, after merging, on the live site. Mark Slice 2 DONE in roadmap.md only after that.
-- Heads-up for Slice 3: the summary counts tasks completed in the last 7 days, so the `tasks` table will need a column recording when each task was ticked off. That is a Slice 3 change, not part of Slice 2.
+- Start Slice 3 (most-avoided skill) from roadmap.md.
+- Heads-up for Slice 3: the summary counts tasks completed in the last 7 days, so the `tasks` table will need a column recording when each task was ticked off.
