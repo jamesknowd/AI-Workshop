@@ -9,6 +9,11 @@ Last updated: 2026-10-13
 - A person can log out, and the login form comes back with their email no longer shown.
 - A person who logs in with a wrong password sees an error message and stays logged out.
 - A person who logs in, closes the tab, and reopens the site is still signed in.
+- Slice 2 (tagged tasks that persist) is done and working on the live site.
+- A signed-in person can type a study task, choose one of six skills (Reading, Writing, Listening, Speaking, Vocabulary, Grammar), and click Add. The task appears in their list with its skill label.
+- A person who logs out and back in finds their tasks still there with the same skill labels.
+- A person can tick a task's checkbox to mark it done, and it still shows as done after they reload the page.
+- A person who signs up for a second account sees none of the first account's tasks.
 
 ## In progress
 - Slice 2 (tagged tasks that persist) is built in the "Slice 2" pull request, not yet merged or checked on the live site.
