@@ -27,6 +27,7 @@
 - Every Supabase table that holds user data has row level security turned on, so each user sees only their own rows.
 - At the end of each session, update project-state.md.
 - A slice is done only when every done-criterion in roadmap.md passes on the live site.
+- Before opening a pull request, update roadmap.md and project-state.md to match the work in it.
 
 ## Current focus
 See roadmap.md. Work only on the slice marked ACTIVE.
