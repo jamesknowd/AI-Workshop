@@ -4,7 +4,11 @@ Last updated: 2026-10-13
 ## Works
 - Next.js site (App Router, TypeScript, plain CSS) is live on Vercel at https://ai-workshop-nine-beige.vercel.app and deploys from the main branch.
 - A Supabase project exists and is linked to the repo.
-- Slice 1 (sign up and log in) is built and in review as the pull request "Slice 1: sign up and log in". It is not merged, so it is not on the live site yet. The home page is now the sign-up / log-in screen; the old bio page is in git history.
+- Slice 1 (sign up and log in) is done and working on the live site.
+- A person can open the live site and create an account with an email and a password. They are signed in straight away, and the page shows "Signed in as" followed by their email.
+- A person can log out, and the login form comes back with their email no longer shown.
+- A person who logs in with a wrong password sees an error message and stays logged out.
+- A person who logs in, closes the tab, and reopens the site is still signed in.
 
 ## Broken or flaky
 - `npm run lint` is listed in CLAUDE.md but there is no lint script in package.json, so it does not run. Adding ESLint was declined for now; `npm run build` is the check before pull requests.
