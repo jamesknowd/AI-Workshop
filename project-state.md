@@ -1,18 +1,22 @@
 # Project state
-Last updated: 2026-10-08
+Last updated: 2026-10-13
 
 ## Works
 - Next.js site (App Router, TypeScript, plain CSS) is live on Vercel at https://ai-workshop-nine-beige.vercel.app and deploys from the main branch.
 - A Supabase project exists and is linked to the repo.
+- Slice 1 (sign up and log in) is built and in review as the pull request "Slice 1: sign up and log in". It is not merged, so it is not on the live site yet. The home page is now the sign-up / log-in screen; the old bio page is in git history.
 
 ## Broken or flaky
-- Nothing known. The site does not use Supabase yet, so there is no sign-in and no saved data.
+- `npm run lint` is listed in CLAUDE.md but there is no lint script in package.json, so it does not run. Adding ESLint was declined for now; `npm run build` is the check before pull requests.
+- Slice 1 has not yet been checked against its done-criteria on a preview or the live site.
 
 ## Environment notes
 - Hosting: Vercel. Database and auth: Supabase.
 - Supabase keys live in Vercel project settings (Environment Variables) and in a local .env.local file. They are never committed or pasted into chat.
-- Supabase sends a confirmation email on sign-up by default. Its built-in email sender only allows a few emails per hour, so testing sign-up repeatedly can hit that limit.
+- Email confirmation is turned off in Supabase, so a new account is signed in straight away with no confirmation email.
+- The site uses @supabase/supabase-js (added 2026-10-13 with approval). The login session is kept in the browser's local storage.
+- If login fails on a Vercel preview link but not on the live site, check that NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY are enabled for the Preview environment in Vercel.
 
 ## Next session
-- Start Slice 1 (sign up and log in) from roadmap.md.
-- Ask before adding the Supabase client library.
+- Check each Slice 1 done-criterion on the preview link, then merge and re-check on the live site.
+- Once Slice 1 passes on the live site, mark it done in roadmap.md and start Slice 2.
