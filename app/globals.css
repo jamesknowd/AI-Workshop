@@ -171,6 +171,85 @@ button:disabled {
   margin: 0 0 1.5rem;
 }
 
+.tasks {
+  margin-top: 2.5rem;
+}
+
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.task-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+.task-form label:first-child {
+  flex: 1 1 16rem;
+}
+
+.task-form input,
+.task-form select {
+  font: inherit;
+  font-weight: normal;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.task-list li + li {
+  margin-top: 0;
+}
+
+.task-list label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.task-list input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+}
+
+.task-list li.done .task-text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.skill-tag {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+}
+
 @media (max-width: 600px) {
   body {
     font-size: 16px;

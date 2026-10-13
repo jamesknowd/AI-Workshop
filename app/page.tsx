@@ -3,6 +3,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase } from "./lib/supabase";
+import TaskList from "./TaskList";
 
 type Mode = "login" | "signup";
 
@@ -93,6 +94,7 @@ export default function Home() {
         <button type="button" onClick={handleLogout} disabled={busy}>
           Log out
         </button>
+        <TaskList key={session.user.id} userId={session.user.id} />
       </main>
     );
   }
