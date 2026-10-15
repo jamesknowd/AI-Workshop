@@ -14,7 +14,10 @@ Last updated: 2026-10-15
 - A person who logs out and back in finds their tasks still there with the same skill labels.
 - A person can tick a task's checkbox to mark it done, and it still shows as done after they reload the page.
 - A person who signs up for a second account sees none of the first account's tasks.
-- Slice 3 (lists) is built in the "Slice 3" pull request, and its SQL has been run in Supabase. All three done-criteria passed on the preview link on 2026-10-15. It is not merged yet, so it is not on the live site.
+- Slice 3 (lists) is done and working on the live site (checked 2026-10-15).
+- A signed-in person can click New list, type a name, and save it; the new list appears in the List menu.
+- A person adding a task picks which list it goes in from the "Add to list" dropdown, and the page shows only the tasks in the list chosen in the List menu.
+- Tasks that existed before lists were added are in a list called "My tasks".
 
 ## Broken or flaky
 - `npm run lint` is listed in CLAUDE.md but there is no lint script in package.json, so it does not run. Adding ESLint was declined for now; `npm run build` is the check before pull requests.
@@ -29,6 +32,6 @@ Last updated: 2026-10-15
 - If login fails on a Vercel preview link but not on the live site, check that NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY are enabled for the Preview environment in Vercel.
 
 ## Next session
-- Merge the "Slice 3" pull request, check the three Slice 3 done-criteria on the live site, then mark Slice 3 DONE and Slice 4 ACTIVE in roadmap.md.
-- After that, start Slice 4 (most-avoided skill) from roadmap.md.
+- Start Slice 4 (most-avoided skill) from roadmap.md.
+- When a slice changes the database, say before the SQL is run whether the live site will break until the pull request is merged (running the Slice 3 SQL broke adding tasks on the live site until the merge).
 - Heads-up for Slice 4: the summary counts tasks completed in the last 7 days, so the `tasks` table will need a column recording when each task was ticked off.
