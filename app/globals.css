@@ -205,6 +205,41 @@ button:disabled {
   color: var(--text);
 }
 
+.list-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.list-bar label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+.list-bar select {
+  font: inherit;
+  font-weight: normal;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+button.secondary:hover:not(:disabled),
+button.secondary:focus-visible {
+  background: rgba(15, 94, 94, 0.08);
+}
+
 .task-list {
   list-style: none;
   padding: 0;
