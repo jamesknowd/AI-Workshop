@@ -1,5 +1,5 @@
 # Project state
-Last updated: 2026-10-13
+Last updated: 2026-10-15
 
 ## Works
 - Next.js site (App Router, TypeScript, plain CSS) is live on Vercel at https://ai-workshop-nine-beige.vercel.app and deploys from the main branch.
@@ -29,3 +29,4 @@ Last updated: 2026-10-13
 ## Next session
 - Start Slice 3 (most-avoided skill) from roadmap.md.
 - Heads-up for Slice 3: the summary counts tasks completed in the last 7 days, so the `tasks` table will need a column recording when each task was ticked off.
+- Slice 4 (task priority) is written into roadmap.md and waits until Slice 3 is done. It needs a new `priority` column on the `tasks` table (low, normal or high, default normal), a priority choice on the Add form, and the list sorted High, Normal, Low, then oldest first. Priority is chosen only when a task is added; changing it later is in the Backlog.
